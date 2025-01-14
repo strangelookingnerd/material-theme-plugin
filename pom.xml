@@ -15,7 +15,9 @@
     <revision>0.5.2</revision>
     <changelist>-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/material-theme-plugin</gitHubRepo>
-    <jenkins.version>2.346.1</jenkins.version>
+    <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
+    <jenkins.baseline>2.346</jenkins.baseline>
+    <jenkins.version>${jenkins.baseline}.1</jenkins.version>
     <tagNameFormat>@{project.version}</tagNameFormat>
     <useBeta>true</useBeta>
   </properties>
@@ -25,7 +27,7 @@
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.346.x</artifactId>
+        <artifactId>bom-${jenkins.baseline}.x</artifactId>
         <version>1607.va_c1576527071</version>
         <scope>import</scope>
         <type>pom</type>
